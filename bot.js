@@ -162,9 +162,8 @@ message.channel.sendEmbed(cat);
 });
 
 
-client.on('ready', () => {
-     client.user.setActivity("For add Bot--> +invite",{type: 'LISTENING'});
 
+     
 
 
 
