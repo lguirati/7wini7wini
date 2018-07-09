@@ -162,8 +162,22 @@ message.channel.sendEmbed(cat);
 });
 
 
-
+const randomPuppy = require('random-puppy');
+client.on('message', msg => { 
      
+        if (msg.content.startsWith(prefix + `meme`)) {
+           let args = msg.content.split(" ").slice(1);
+randomPuppy('memes')
+    .then(url => {
+        const embed = new Discord.RichEmbed()
+            .setTimestamp()
+            .setImage(url)
+            .setColor('RANDOM')
+        msg.channel.send(embed);
+    });
+}
+});
+
 
 
 
