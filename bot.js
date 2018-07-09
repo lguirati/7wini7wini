@@ -153,7 +153,7 @@ if (message.content.startsWith(prefix + 'ms7')) {
 
 
 client.on('message', message => {
-if (message.content.startsWith("!kick")) {
+if (message.content.startsWith("+kick")) {
     var mention = message.mentions.member.first();
     if(!mention) return message.channel.send("u want to ping who u want to kick");
 
