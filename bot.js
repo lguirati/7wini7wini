@@ -28,7 +28,6 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log('')
 });
 
-
 client.on('message', message => {
     if (message.content.startsWith("+avatar")) {
         var mentionned = message.mentions.users.first();
@@ -45,65 +44,6 @@ client.on('message', message => {
       message.channel.sendEmbed(embed);
     }
 });
-
-
-
-client.on('message', message => {
-if (message.content === "+id") {
-var year = message.createdAt.getFullYear()
-var month = message.createdAt.getMonth()
-var day = message.createdAt.getDate()
-     let embed = new Discord.RichEmbed()
-     .setAuthor(message.author.username, message.author.avatarURL)
-  .setThumbnail(message.author.avatarURL)
-    .addField("**اسمك:**",  '**[ ' + `${message.author.username}` + ' ]**')
-      .setThumbnail(message.author.avatarURL)
-               .setFooter(`${message.author.username}`, 'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
-  .addField('الكود الخاص بك:', message.author.discriminator)
-  .addField("**عدد الايام منذ افتتاح حسابك:**", message.author.createdAt.getDate())
-    .addField("** تم افتتاح حسابك عام:**", message.createdAt.getFullYear())
-        .addField("** عدد الشهور منذ افتتاح حسابك:**", message.createdAt.getMonth())
-
-  message.channel.send({embed});
-    }
-})
-
-cli             .setFooter(`${message.author.username}`, 'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
-  .addField('الكود الخاص بك:', message.author.discriminator)
-  .addField("**عدد الايام منذ افتتاح حسابك:**", message.author.createdAt.getDate())
-    .addField("** تم افتتاح حسابك عام:**", message.createdAt.getFullYear())
-        .addField("** عدد الشهور منذ افتتاح حسابك:**", message.createdAt.getMonth())
-
-  message.channel.send({embed});
-    }
-})
-
-client.on('message', message => {
-if(message.content.startsWith(prefix + "invite")) { 
-message.author.send(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2080374975`);
-}
-});
-
-
-
-client.on('message', message => {
-    let args = message.content.split(" ").slice(1);
-if (message.content.startsWith(prefix + 'ms7')) {
- let args = message.content.split(" ").slice(1)
-    let messagecount = parseInt(args);
-    if (args > 100) return message.reply("اعلى حد للمسح هو 100").then(messages => messages.delete(5000))
-    if (!messagecount) return message.reply("ااختر كمية المسح من 1-100").then(messages => messages.delete(5000))
-    message.channel.fetchMessages({limit: messagecount + 1}).then(messages => message.channel.bulkDelete(messages));
-    message.channel.send(`\`${args}\` تم المسح`).then(messages => messages.delete(5000));
-  }
-  });
-
-
-
-
-
-
-
 
 client.on('message', message => {
     if (message.author.id === client.user.id) return;
