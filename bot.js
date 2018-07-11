@@ -197,5 +197,4 @@ client.on('ready', function(){
 
 
 
-
 client.login(process.env.BOT_TOKEN);
