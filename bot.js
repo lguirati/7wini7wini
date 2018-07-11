@@ -154,7 +154,7 @@ if (message.content.startsWith(prefix + 'ms7')) {
 
 client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~The ARAB GAMER ~~__ By: Spomi : 9954 
 
-╔[❖════════════❖]╗ Prefix = ' + ' 
+╔[❖════════════❖]╗ Prefix =  +
    
 ╔[❖════════════❖]╗بعض أوامر
 
