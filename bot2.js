@@ -46,6 +46,7 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
 
 https://discordapp.com/oauth2/authorize?client_id=466684487674363904&scope=bot&permissions=2080374975
 
+================================================================== `); } });
 
 
 
