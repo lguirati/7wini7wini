@@ -82,7 +82,7 @@ return;
 
 
 client.on('message', message => {
-if (message.content.startsWith(prefix+"")) {
+if (message.content.startsWith(prefix+"voice")) {
     var args = message.content.split(" ").slice(1);
     var argrst = args.join(' ');
                 message.guild.createChannel(`${argrst}`,'voice')
@@ -93,7 +93,22 @@ if (message.content.startsWith(prefix+"")) {
 
 
 
-
+client.on('message', message => {
+    if (message.content.startsWith(".avatar")) {
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var x5bzm = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setImage(`${x5bzm.avatarURL}`)
+      message.channel.sendEmbed(embed);
+    }
+});
 
 
 
