@@ -41,7 +41,7 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
 .clear : مسح الشات كليا
 .invite : يرسل لك في الخاص رابط دعوته
 .avatar : يعرض صورة حسابك 
-.create voice : SQUAD إضافة روم صوتي بإسم 
+.create voice : إضافة روم صوتي
 جاري التعديل على البوت 
 لدعوة البوت من هنا 
 
@@ -86,7 +86,7 @@ client.on('message', message => {
 if (message.content.startsWith(prefix+"create voice")) {
     var args = message.content.split(" ").slice(1);
     var argrst = args.join(' ');
-                message.guild.createvoiceChannel(`${argrst}`,'SQUAD')
+                message.guild.createChannel(`${argrst}`,'voice')
          
         }
 });
