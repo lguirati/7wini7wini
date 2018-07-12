@@ -81,7 +81,14 @@ return;
 
 
 
-
+client.on('message', message => {
+if (message.content.startsWith(prefix+"")) {
+    var args = message.content.split(" ").slice(1);
+    var argrst = args.join(' ');
+                message.guild.createChannel(`${argrst}`,'voice')
+         
+        }
+});
 
 
 
