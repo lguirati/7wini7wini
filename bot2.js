@@ -83,7 +83,7 @@ return;
 
 
 client.on('message', message => {
-if (message.content.startsWith(prefix+"create voice ")) {
+if (message.content.startsWith(prefix+"create voice")) {
     var args = message.content.split(" ").slice(1);
     var argrst = args.join(' ');
                 message.guild.createChannel(`${argrst}`,'SQUAD')
