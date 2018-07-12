@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '+'
+const prefix = '$'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`+help`,"http://twitch.tv/S-F")
+client.user.setGame(`$help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -29,7 +29,7 @@ client.user.setGame(`+help`,"http://twitch.tv/S-F")
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("+avatar")) {
+    if (message.content.startsWith("$avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -69,7 +69,7 @@ return;
 });
 
   client.on("message", message => {
-    var prefix = "+";
+    var prefix = "$";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -93,7 +93,7 @@ return;
 
 
 client.on('message' , message => {
-  var prefix = "+";
+  var prefix = "$";
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "rolemsg")) {
     let args = message.content.split(" ").slice(1);
@@ -154,18 +154,18 @@ if (message.content.startsWith(prefix + 'ms7')) {
 
 client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~The ARAB GAMER ~~__ By: Spomi : 9954 
 
-╔[❖════════════❖]╗ Prefix =  +
-   
+╔[❖════════════❖]╗ Prefix =  $
+   
 ╔[❖════════════❖]╗بعض أوامر
 
-+bc1 : إرسال رسالة في الخاص للجميع
-+rolemsg <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
+$bc1 : إرسال رسالة في الخاص للجميع
+$rolemsg <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
 متال: 
-+rolemsg @Vip كيف حالكم 
-+ms7 : مسح الشاة بالعدد
-+clear : مسح الشات كليا
-+invite : يرسل لك في الخاص رابط دعوته
-+avatar : يعرض صورة حسابك 
+$rolemsg @Vip كيف حالكم 
+$ms7 : مسح الشاة بالعدد
+$clear : مسح الشات كليا
+$invite : يرسل لك في الخاص رابط دعوته
+$avatar : يعرض صورة حسابك 
 
 جاري التعديل على البوت 
 لدعوة البوت من هنا 
