@@ -40,9 +40,13 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
 .ms7 : مسح الشاة بالعدد
 .clear : مسح الشات كليا
 .invite : يرسل لك في الخاص رابط دعوته
-.avatar : يعرض صورة حسابك 
-.create voice : إضافة روم صوتي
-جاري التعديل على البوت 
+.avatar : يعرض صورة حسابك   
+.create SQUAD (رقم السكواد):.create SQUAD 1 متال
+يأتيك إسم الفويس بهاد الشكل 
+SQUAD 1
+
+_____________________________________________
+جاري التعديل على البوت
 لدعوة البوت من هنا 
 
 https://discordapp.com/oauth2/authorize?client_id=466684487674363904&scope=bot&permissions=2080374975
@@ -83,7 +87,7 @@ return;
 
 
 client.on('message', message => {
-if (message.content.startsWith(prefix+"create voice")) {
+if (message.content.startsWith(prefix+"create SQUAD")) {
     var args = message.content.split(" ").slice(1);
     var argrst = args.join(' ');
                 message.guild.createChannel(`${argrst}`,'voice')
