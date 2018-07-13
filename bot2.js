@@ -33,7 +33,7 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
 ╔[❖════════════❖]╗ Prefix =  .
    
 ╔[❖════════════❖]╗بعض أوامر
-.bc1 : إرسال رسالة في الخاص للجميع
+.bc : إرسال رسالة في الخاص للجميع
 .rolemsg <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
 متال: 
 .rolemsg @Vip كيف حالكم 
@@ -44,7 +44,7 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
 .create SQUAD (رقم السكواد):.create SQUAD 1 متال
 يأتيك إسم الفويس بهاد الشكل 
 SQUAD 1
-
+.id : معلومات عن حسابك 
 _____________________________________________
 جاري التعديل على البوت
 لدعوة البوت من هنا 
