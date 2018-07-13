@@ -120,7 +120,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-   if (message.content.startsWith("=idd")) {
+   if (message.content.startsWith(".id")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
 
                var mentionned = message.mentions.users.first();
