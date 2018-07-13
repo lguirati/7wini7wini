@@ -61,25 +61,28 @@ message.author.send(`https://discordapp.com/oauth2/authorize?client_id=${client.
 });
 
 client.on('message', message => {
-    if (message.author.id === client.user.id) return;
-    if (message.guild) {
+   if (message.content.startsWith(".id")) {
+                if(!message.channel.guild) return message.reply('** This command only for servers**');
+
+               var mentionned = message.mentions.users.first();
+    var mentionavatar;
+      if(mentionned){
+          var mentionavatar = mentionned;
+      } else {
+          var mentionavatar = message.author;
+          
+      }
    let embed = new Discord.RichEmbed()
-    let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc1') {
-    if (!args[1]) {
-return;
-}
-        message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
-            var bc = new Discord.RichEmbed()
-            .addField(' » الرسالة : ', args)
-            .setColor('#ff0000')
-            // m.send(`[${m}]`);
-            m.send(`${m}`,{embed: bc});
-        });
-    }
-    } else {
-        return;
+  .setColor("RANDOM")
+   .setThumbnail(`${mentionavatar.avatarURL}`)
+  .addField("Name:",`<@` + `${mentionavatar.id}` + `>`, true)
+  .addField('Discrim:',"#" +  `${mentionavatar.discriminator}`, true)
+   .addField("ID:", "**[" + `${mentionavatar.id}` + "]**", true)
+  .addField("Create At:", "**[" + `${mentionavatar.createdAt}` + "]**", true)
+     
+     
+  message.channel.sendEmbed(embed);
+  console.log('[id] Send By: ' + message.author.username)
     }
 });
 
