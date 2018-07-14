@@ -190,7 +190,7 @@ client.on('message', msg => {
 var prefix = ".";
   if(!msg.guild) return;
     if(!msg.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**⚠ لا يوجد لديك صلاحية**');
-    if (msg.content.startsWith(prefix +'clear')) {
+    if (msg.content.startsWith(prefix +'clearallrooms')) {
 let ra3d = new Discord.RichEmbed()
 .setColor('RANDOM')
 .setThumbnail(msg.author.avatarURL)
