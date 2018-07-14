@@ -215,46 +215,41 @@ client.on("message", message => {
 }); 
 
  
-client.on('message',async message => {
-  if(message.content.startsWith(prefix + "bc")) {
-    let filter = m => m.author.id === message.author.id;
-    let thisMessage;
-    let thisFalse;
-    message.channel.send(':regional_indicator_b::regional_indicator_c:| **ارسل الرسالة الان**').then(msg => {
 
-    let awaitM = message.channel.awaitMessages(filter, {
-      max: 1,
-      time: 20000,
-      errors: ['time']
-    })
-    .then(collected => {
-      collected.first().delete();
-      thisMessage = collected.first().content;
-      msg.edit(':regional_indicator_b::regional_indicator_c:| **هل انت متأكد؟**');
-      let awaitY = message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
-        max: 1,
-        time: 20000,
-        errors: ['time']
-      })
-      .then(collected => {
-        if(collected.first().content === 'لا') {
-          msg.delete();
-          message.delete();
-          thisFalse = false;
-        }
-        if(collected.first().content === 'نعم') {
-          if(thisFalse === false) return;
-        message.guild.members.forEach(member => {
-          msg.edit(':regional_indicator_b::regional_indicator_c:| **جاري الارسال**');
-          collected.first().delete();
-          member.send(`${thisMessage}\n\n${member} ,\nتم الارسال من : ${message.guild.name}\n تم الارسال بواسطة : ${message.author.tag}`);
-        });
-        }
-      });
-    });
-    });
-  }
+client.on('message', message => {
+    if (message.content === "+serooms") {
+    if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
+            if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
+
+        
+     message.guild.createChannel('「 O W N E R 」', 'voice')
+     message.guild.createChannel('「 C O - L E A D E R 」', 'voice')
+     message.guild.createChannel('「ADMINSTRATOR」', 'voice')
+     message.guild.createChannel('𖦲₁PARTY | بارتي𖦲', 'voice')
+     message.guild.createChannel('𖦲₂PARTY | بارتي𖦲', 'voice')
+     message.guild.createChannel('𖦲₂PARTY | بارتي𖦲', 'voice')
+     message.guild.createChannel('✬ʝuşτ-1✬', 'voice')
+ message.guild.createChannel('✬ʝuşτ-2✬', 'voice')
+     message.guild.createChannel('✬ʝuşτ-3✬', 'voice')
+     message.guild.createChannel('✬ʝuşτ-4✬', 'voice')
+     message.guild.createChannel('✬ʝuşτ-5✬', 'voice')
+     message.guild.createChannel('😴sleep', 'voice')
+          message.guild.createChannel('༆كَبّـآرَ آلَشّـخٌـصِـيّآتُ༆', 'voice')
+     message.guild.createChannel('welcome', 'text')
+     message.guild.createChannel('info', 'text')
+     message.guild.createChannel('bot', 'text')
+     message.guild.createChannel('chat', 'text')
+     message.guild.createChannel('Youtube', 'text')
+     message.guild.createChannel('bo7', 'text')
+     message.guild.createChannel('party', 'text')
+     message.guild.createChannel('pic', 'text')
+
+
+message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم صناعة السيرفر**')
+}
 });
+ 
+
 
 
 client.login(process.env.BOT_TOKEN);
