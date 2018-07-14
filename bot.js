@@ -68,28 +68,40 @@ return;
     }
 });
 
-  client.on("message", message => {
-    var prefix = "$";
- 
-            var args = message.content.substring(prefix.length).split(" ");
-            if (message.content.startsWith(prefix + "clear")) {
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحية لمسح الشات**');
-        var msg;
-        msg = parseInt();
-      
-      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-      message.channel.sendMessage("", {embed: {
-        title: "Done | تــم مسح الشات",
-        color: 0x06DF00,
-        description: "تم مسح الرسائل ",
-        footer: {
-          text: "©zabhm"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-}); 
+  client.on('message', msg => {
+var prefix = "$";
+  if(!msg.guild) return;
+    if(!msg.member.hasPermission('MANAGE_CHANNELS')) return message.reply('**⚠ لا يوجد لديك صلاحية**');
+    if (msg.content.startsWith(prefix +'clear')) {
+let ra3d = new Discord.RichEmbed()
+.setColor('RANDOM')
+.setThumbnail(msg.author.avatarURL)
+.setDescription(`هل انت متاكد من مسح كل شي بالسيرفر ؟\n  ✅  \n  ❌ \n  لديك 60 ثانية للاختيار`)                                                                                                                                                                       
+msg.channel.send(ra3d).then(message => {
+ message.react('✅').then(r=>{
+ message.react('❌').then(r=>{           
+ let sd = (reaction, user) => reaction.emoji.name === '✅' && user.id === msg.author.id;
+ let nd = (reaction, user) => reaction.emoji.name === '❌' && user.id === msg.author.id;
+ let ds  = message.createReactionCollector(sd, { time: 60000 });
+ let dn  = message.createReactionCollector(nd, { time: 60000 });
+dn.on("collect", r => {
+msg.channel.send("`تم الالغاء`")
+message.delete();
+})
+ds.on("collect", r => {
+message.guild.roles.forEach(r => { r.delete() }) 
+     message.guild.channels.forEach(c => { c.delete() })
+     message.guild.createChannel('general', 'text').then(c=> c.send(ra3d));
+     let ra3d = new Discord.RichEmbed()
+            .setColor('#fd0101')
+            .setDescription('`تم حذف كل شي في السيرفر✅`')
+           message.channel.sendEmbed(ra3d);
+})
+})
+})
+})
+}
+});
 
 
 client.on('message' , message => {
