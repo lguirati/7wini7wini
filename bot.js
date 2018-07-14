@@ -143,7 +143,7 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
    
 ╔[❖════════════❖]╗بعض أوامر
 
-$bc1 : إرسال رسالة في الخاص للجميع
+$bc : إرسال رسالة في الخاص للجميع
 $rolemsg <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
 متال: 
 $rolemsg @Vip كيف حالكم 
