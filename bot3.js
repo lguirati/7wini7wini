@@ -38,7 +38,7 @@ client.on('message', function (message) {
 
 
     switch (command) {
-        case "×join":
+        case "×come":
         if(message.guild.voiceConnection){
             message.reply('I\'m Already In A Voice Connection!');
         }else if(!message.member.voiceChannel){
