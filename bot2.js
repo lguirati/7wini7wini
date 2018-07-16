@@ -328,39 +328,18 @@ client.on('message', async message => {
     }
 })
 
-KiNg66S.on('message', function(KiNg66S) {
-if (KiNg66S.author.bot) return;
-if (KiNg66S.author.id === KiNg66S.user.id) return;
-if (KiNg66S.author.equals(KiNg66S.user)) return;
-if (!KiNg66S.content.startsWith(prefix)) return;
-
-var args = KiNg66S.content.substring(prefix.length).split(' ');
-switch (args[0].toLocaleLowerCase()) {
-case "مسح" :
-KiNg66S.delete()
-if(!KiNg66S.channel.guild) return
-if(KiNg66S.member.hasPermissions(0x2000)){ if (!args[1]) {
-KiNg66S.channel.fetchMessages()
-.then(messages => {
-KiNg66S.channel.bulkDelete(messages);
-var messagesDeleted = messages.array().length;
-KiNg66S.channel.sendMessage(' '+ " " + messagesDeleted + " " +  '**: عدد الرسائل التي تم مسحه**').then(m => m.delete(2500));
-})
-} else {
-let messagecount = parseInt(args[1]);
-KiNg66S.channel.fetchMessages({limit: messagecount}).then(messages => KiNg66S.channel.bulkDelete(messages));
-KiNg66S.channel.sendMessage(' '+ " " + args[1] + " " +  '**: عدد الرسائل التي تم مسحه**').then(m => m.delete(2500));
-KiNg66S.delete(60000);
-}
-} else {
-var manage = new Discord.RichEmbed()
-.setDescription('You Do Not Have Permission MANAGE_MESSAGES :(')
-.setColor("RANDOM")
-KiNg66S.channel.sendEmbed(manage)
-return;
-}
-}
-});
+var prefix = '.';
+client.on('message', message => {
+    let args = message.content.split(" ").slice(1);
+if (message.content.startsWith(prefix + 'ms7')) {
+ let args = message.content.split(" ").slice(1)
+    let messagecount = parseInt(args);
+    if (args > 100) return message.reply("اعلى حد للمسح هو 100").then(messages => messages.delete(5000))
+    if (!messagecount) return message.reply("ااختر كمية المسح من 1-100").then(messages => messages.delete(5000))
+    message.channel.fetchMessages({limit: messagecount + 1}).then(messages => message.channel.bulkDelete(messages));
+    message.channel.send(`\`${args}\` تم المسح`).then(messages => messages.delete(5000));
+  }
+  });
 
 
 
