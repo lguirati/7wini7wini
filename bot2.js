@@ -336,7 +336,7 @@ if (!KiNg66S.content.startsWith(prefix)) return;
 
 var args = KiNg66S.content.substring(prefix.length).split(' ');
 switch (args[0].toLocaleLowerCase()) {
-case "ms7" :
+case "مسح" :
 KiNg66S.delete()
 if(!KiNg66S.channel.guild) return
 if(KiNg66S.member.hasPermissions(0x2000)){ if (!args[1]) {
