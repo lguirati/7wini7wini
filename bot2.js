@@ -38,8 +38,7 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
 متال: 
 .rolemsg @Vip كيف حالكم 
 .move all : لسحب كل المتصلين إلى الروم الدي توجد فيه 
-.ms7 : مسح الشاة بالعدد
-.clear : مسح الشات كليا
+.clear : مسح الشات يعطيك البوت رسال هل أنت متأكد فتضغط على ✔أو ❌ الموافق تتم ب ✔ للعم
 .invite : يرسل لك في الخاص رابط دعوته
 .avatar : يعرض صورة حسابك   
 .create SQUAD (رقم السكواد):.create SQUAD 1 متال
