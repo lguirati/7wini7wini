@@ -382,18 +382,6 @@ if (message.content.startsWith(".botowner")) {
           message.channel.send(embed);
         }});
 
-client.on('message', message => {
-    if (message.author.bot) return;
-            if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('.usersbot')){
- if(!message.author.id === ' 28176231752230522305024') return;
-message.channel.sendMessage('جار ارسال الرسالة |✅')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
 
 
 
