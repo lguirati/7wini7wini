@@ -4,7 +4,7 @@ const prefix = '='
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`For add Talke with #9954`,"http://twitch.tv/S-F")
+client.user.setGame(`For add Talke #9954| =help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -29,6 +29,21 @@ client.user.setGame(`For add Talke with #9954`,"http://twitch.tv/S-F")
 });
 
 
+
+client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~The ARAB GAMER ~~__ By: Spomi : 9954 
+
+for add The Bot Talke White owner Bot #9954 
+
+#لدعوت البوت المرج التكلم مع المالط 9954
+
+Owner name : Spomi
+
+================================================================== `); } });
+
+
+
+
+
 client.on("ready", async  => {
 setInterval(function(){
 client.channels.find('id', '453449558761144330').setName("W");
@@ -47,26 +62,28 @@ client.channels.find('id', '453449558761144330').setName("Welcome To SER");
 client.channels.find('id', '453449558761144330').setName("Welcome To SERV");
 client.channels.find('id', '453449558761144330').setName("Welcome To SERVE");
 client.channels.find('id', '453449558761144330').setName("Welcome To SERVER");
-}, 7000);
+}, 8000);
  
 });
 
 
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '465574494476435461').setName("a");
-client.channels.find('id', '465574494476435461').setName("an");
-client.channels.find('id', '465574494476435461').setName("ann");
-client.channels.find('id', '465574494476435461').setName("anno");
-client.channels.find('id', '465574494476435461').setName("annou");
-client.channels.find('id', '465574494476435461').setName("announ");
-client.channels.find('id', '465574494476435461').setName("announc");
-client.channels.find('id', '465574494476435461').setName("announce");
-client.channels.find('id', '465574494476435461').setName("announcem");
-client.channels.find('id', '465574494476435461').setName("announceme");
-client.channels.find('id', '465574494476435461').setName("announcemen");
-client.channels.find('id', '465574494476435461').setName("announcement");
-}, 7000);
+client.channels.find('id', '465574494476435461').setName("🔊");
+client.channels.find('id', '465574494476435461').setName("🔊a");
+client.channels.find('id', '465574494476435461').setName("🔊an");
+client.channels.find('id', '465574494476435461').setName("🔊ann");
+client.channels.find('id', '465574494476435461').setName("🔊anno");
+client.channels.find('id', '465574494476435461').setName("🔊annou");
+client.channels.find('id', '465574494476435461').setName("🔊announ");
+client.channels.find('id', '465574494476435461').setName("🔊announc");
+client.channels.find('id', '465574494476435461').setName("🔊announce");
+client.channels.find('id', '465574494476435461').setName("🔊announcem");
+client.channels.find('id', '465574494476435461').setName("🔊announceme");
+client.channels.find('id', '465574494476435461').setName("🔊announcemen");
+client.channels.find('id', '465574494476435461').setName("🔊announcement");
+client.channels.find('id', '465574494476435461').setName("🔊announcement🕪");
+}, 8000);
  
 });
 
@@ -87,7 +104,7 @@ client.channels.find('id', '444855713726988288').setName("🔴live-twit");
 client.channels.find('id', '444855713726988288').setName("🔴live-twitc");
 client.channels.find('id', '444855713726988288').setName("🔴live-twitch");
 client.channels.find('id', '444855713726988288').setName("🔴live-twitch🔴");
-}, 7000);
+}, 8000);
  
 });
 
