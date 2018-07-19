@@ -52,4 +52,34 @@ client.channels.find('id', '453449558761144330').setName("Welcome To SERVER");
 });
 
 
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '465574494476435461').setName("W");
+client.channels.find('id', '465574494476435461').setName("We");
+client.channels.find('id', '465574494476435461').setName("Wel");
+client.channels.find('id', '465574494476435461').setName("Welc");
+client.channels.find('id', '465574494476435461').setName("Welco");
+client.channels.find('id', '465574494476435461').setName("Welcom");
+client.channels.find('id', '465574494476435461').setName("Welcome");
+client.channels.find('id', '465574494476435461').setName("Welcome T");
+client.channels.find('id', '465574494476435461').setName("Welcome To");
+client.channels.find('id', '465574494476435461').setName("Welcome To ");
+client.channels.find('id', '465574494476435461').setName("Welcome To S");
+client.channels.find('id', '465574494476435461').setName("Welcome To SE");
+client.channels.find('id', '465574494476435461').setName("Welcome To SER");
+client.channels.find('id', '465574494476435461').setName("Welcome To SERV");
+client.channels.find('id', '465574494476435461').setName("Welcome To SERVE");
+client.channels.find('id', '465574494476435461').setName("Welcome To SERVER");
+}, 7000);
+ 
+});
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT4_TOKEN);
