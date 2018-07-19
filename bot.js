@@ -244,7 +244,6 @@ msg.delete();
 })
 }
 });
-
  
 
 client.on('message', message => {
