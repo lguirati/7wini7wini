@@ -47,7 +47,7 @@ client.channels.find('id', '469336127254298625').setName("Welcome To SER");
 client.channels.find('id', '469336127254298625').setName("Welcome To SERV");
 client.channels.find('id', '469336127254298625').setName("Welcome To SERVE");
 client.channels.find('id', '469336127254298625').setName("Welcome To SERVER");
-}, 3000);
+}, 7000);
  
 });
 
