@@ -158,6 +158,11 @@ ________________
 لدعوة البوت من هنا 
 https://discordapp.com/oauth2/authorize?client_id=458656092650471435&scope=bot&permissions=2080374975
 ================================================================== `); } });
+التهكير إدا حاول أحد  طرد الكل أو مسح الرومات والشات يتدخل البوت ويمنعه ويخبر الاونر برسالة في الخاص 
+هاده الخاصية موجودة في هدا البوت 
+https://discordapp.com/oauth2/authorize?client_id=469353155335946240&permissions=8&scope=bot
+_____________________________________________
+
 
 client.on('message', message => {
        if (message.content.startsWith(prefix + 'botinfo')) {
