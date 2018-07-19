@@ -163,4 +163,20 @@ channel.guild.owner.send(`<@!${channelremover.id}>
   },Otime)
   });
 
+
+client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~The ARAB GAMER ~~__ By: Spomi : 9954 
+╔[❖════════════❖]╗ Prefix = ×
+creat un room avec le nom look
+creat one room name look 
+سوي روم بإسم look
+
+For add Bot : لدعوت البوت 
+
+https://discordapp.com/oauth2/authorize?client_id=469353155335946240&permissions=8&scope=bot
+
+
+×invite :msg prv avec invite 
+
+https://discordapp.com/oauth2/authorize?client_id=469353155335946240&permissions=8&scope=bot
+
 client.login(process.env.BOT3_TOKEN);
