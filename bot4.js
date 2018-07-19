@@ -135,4 +135,4 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 
-client.login("BOT4_TOKEN");
+client.login(process.env.BOT_TOKEN);
