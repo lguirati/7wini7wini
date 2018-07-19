@@ -153,7 +153,7 @@ $invite : يرسل لك في الخاص رابط دعوته
 $avatar : يعرض صورة حسابك 
 ________________
 البوت يقومو بحماية السيرفر 
-   لكي يصدرلك البوت إندار في دالك الروم Warning فقط سوي روم بإسم
+   لكي يصدرلك البوت إندار في دالك الروم look فقط سوي روم بإسم
 جاري التعديل على البوت
 لدعوة البوت من هنا 
 https://discordapp.com/oauth2/authorize?client_id=458656092650471435&scope=bot&permissions=2080374975
@@ -419,7 +419,7 @@ console.log(error)
 });
  let channelc = {};
   client.on('channelCreate', async (channel) => {
-  const rebellog = client.channels.find("name", "log"),
+  const rebellog = client.channels.find("name", "look"),
   Oguild = channel.guild,
   Onumber = 3,
   Otime = 10000;
