@@ -34,7 +34,3 @@
     "node": "8.4.0"
   }
 }
-
-nvm i 10 
-nvm use 10
-npm i discord.js
