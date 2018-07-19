@@ -394,7 +394,7 @@ message.channel.send({embed});
 ] 
 client.on('message', message => {
  var prefix = '$'; 
-if (message.content.startsWith(prefix + 'من تحب اكثر')){ 
+if (message.content.startsWith(prefix + 'من تحب')){ 
 var mariam= new Discord.RichEmbed() 
 .setTitle("لعبة من تحب اكثر ..")
  .setColor('RANDOM') 
