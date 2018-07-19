@@ -179,6 +179,8 @@ https://discordapp.com/oauth2/authorize?client_id=469353155335946240&permissions
 
 https://discordapp.com/oauth2/authorize?client_id=469353155335946240&permissions=8&scope=bot
 
+================================================================== `); } });
+
 
 
 client.on('message', message => {
