@@ -179,4 +179,18 @@ https://discordapp.com/oauth2/authorize?client_id=469353155335946240&permissions
 
 https://discordapp.com/oauth2/authorize?client_id=469353155335946240&permissions=8&scope=bot
 
+
+
+client.on('message', message => {
+if(message.content.startsWith(prefix + "invite")) { 
+message.author.send(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2080374975`);
+}
+});
+
+
+
+
+
+
+
 client.login(process.env.BOT3_TOKEN);
