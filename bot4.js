@@ -31,22 +31,22 @@ client.user.setGame(`Spomi`,"http://twitch.tv/S-F")
 
 client.on("ready", async  => {
 setInterval(function(){
-client.channels.find('id', '469336127254298625').setName("W");
-client.channels.find('id', '469336127254298625').setName("We");
-client.channels.find('id', '469336127254298625').setName("Wel");
-client.channels.find('id', '469336127254298625').setName("Welc");
-client.channels.find('id', '469336127254298625').setName("Welco");
-client.channels.find('id', '469336127254298625').setName("Welcom");
-client.channels.find('id', '469336127254298625').setName("Welcome");
-client.channels.find('id', '469336127254298625').setName("Welcome T");
-client.channels.find('id', '469336127254298625').setName("Welcome To");
-client.channels.find('id', '469336127254298625').setName("Welcome To ");
-client.channels.find('id', '469336127254298625').setName("Welcome To S");
-client.channels.find('id', '469336127254298625').setName("Welcome To SE");
-client.channels.find('id', '469336127254298625').setName("Welcome To SER");
-client.channels.find('id', '469336127254298625').setName("Welcome To SERV");
-client.channels.find('id', '469336127254298625').setName("Welcome To SERVE");
-client.channels.find('id', '469336127254298625').setName("Welcome To SERVER");
+client.channels.find('id', '469499293838082048').setName("W");
+client.channels.find('id', '469499293838082048').setName("We");
+client.channels.find('id', '469499293838082048').setName("Wel");
+client.channels.find('id', '469499293838082048').setName("Welc");
+client.channels.find('id', '469499293838082048').setName("Welco");
+client.channels.find('id', '469499293838082048').setName("Welcom");
+client.channels.find('id', '469499293838082048').setName("Welcome");
+client.channels.find('id', '469499293838082048').setName("Welcome T");
+client.channels.find('id', '469499293838082048').setName("Welcome To");
+client.channels.find('id', '469499293838082048').setName("Welcome To ");
+client.channels.find('id', '469499293838082048').setName("Welcome To S");
+client.channels.find('id', '469499293838082048').setName("Welcome To SE");
+client.channels.find('id', '469499293838082048').setName("Welcome To SER");
+client.channels.find('id', '469499293838082048').setName("Welcome To SERV");
+client.channels.find('id', '469499293838082048').setName("Welcome To SERVE");
+client.channels.find('id', '469499293838082048').setName("Welcome To SERVER");
 }, 7000);
  
 });
