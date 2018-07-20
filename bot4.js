@@ -30,7 +30,7 @@ client.user.setGame(`For add Talke #9954| =help`,"http://twitch.tv/S-F")
 
 
 
-client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~The ARAB GAMER ~~__ By: Spomi : 9954 
+client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~ Rooms Moving ~~__ By: Spomi : 9954 
 
 for add The Bot Talke White owner Bot #9954 
 
