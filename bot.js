@@ -375,11 +375,7 @@ message.channel.send({embed});
         
         
        
-        client.on('ready', ()=> {
-    console.log('I am Ready!');
-});
-
-//Messages Listener
+        
 client.on('message', message => {
     Content.setContent(message);
 
