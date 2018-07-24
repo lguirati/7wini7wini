@@ -160,7 +160,7 @@ https://discordapp.com/oauth2/authorize?client_id=469353155335946240&permissions
 _____________________________________________
 جاري التعديل على البوت
 لدعوة البوت من هنا 
-https://discordapp.com/oauth2/authorize?client_id=458656092650471435&scope=bot&permissions=2080374975
+https://discordapp.com/oauth2/authorize?client_id=471109019919187985&scope=bot&permissions=2080374975
 ================================================================== `); } });
 
 
