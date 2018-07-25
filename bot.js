@@ -17,7 +17,7 @@ client.on('ready', () => {
 client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 5000 ;
-    var setGame = [`AdminBot`,`LEADER GAMES`];
+    var setGame = [`$invite For add`,`$help For info`];
     var i = -1;
     var j = 0;
     setInterval(function (){
