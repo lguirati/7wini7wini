@@ -369,7 +369,7 @@ return message.channel.send(`**${message.guild.members.filter(member => member.v
 }
 
 client.on('voiceStateUpdate', (member) => {
-member.guild.channels.get("471494146880700436").setName(`In Voice Channel: [${member.guild.members.filter(member => member.voiceChannel).size}]`)
+member.guild.channels.get("471495215664857089").setName(`In Voice Channel: [${member.guild.members.filter(member => member.voiceChannel).size}]`)
 })
  
  
