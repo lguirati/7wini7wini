@@ -359,8 +359,16 @@ client.on('message', async message => {
 
 
 
+client.on('ebnklb',function(ebnklb) {
+    
+    if(ebnklb.content.startsWith("466684487674363904")) {
+        ebnklb.channel.send('Hey Im **PUBG MAROC I CAN help you with commended $help !**  A Nice Bot Developed By:`Spomi #9954 `')
+        ebnklb.channel.send('My Prefix ` . `')
 
-
+    }
+});
+ 
+ 
 
 
 
