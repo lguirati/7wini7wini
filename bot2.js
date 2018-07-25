@@ -359,15 +359,21 @@ client.on('message', async message => {
 
 
 
-client.on('ebnklb',function(ebnklb) {
-    
-    if(ebnklb.content.startsWith("466684487674363904")) {
-        ebnklb.channel.send('Hey Im **PUBG MAROC I CAN help you with commended $help !**  A Nice Bot Developed By:`Spomi #9954 `')
-        ebnklb.channel.send('My Prefix ` . `')
 
-    }
-});
+
+client.login(`BOT2_TOKEN`)
+client.on("message", async function(message)  {
+let args = message.content.split(" ").slice(1).join(" ")
+if(message.content.startsWith(".voice")){
+return message.channel.send(`**${message.guild.members.filter(member => member.voiceChannel).size}**`);
+}
+
+client.on('voiceStateUpdate', (member) => {
+member.guild.channels.get("471494146880700436").setName(`In Voice Channel: [${member.guild.members.filter(member => member.voiceChannel).size}]`)
+})
  
+ 
+
  
 
 
