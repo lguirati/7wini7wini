@@ -448,7 +448,11 @@ message.channel.send({embed});
         
         
         
-        
+        client.on('message' , message => {
+if(message.content === 'voice') {
+    message.channel.send(`**عدد الاشخاص الموجودين بـ  الرومات الصوتيه : ${message.guild.members.filter(g => g.voiceChannel).size}**`);
+}
+});
         
         
         
