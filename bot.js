@@ -459,7 +459,7 @@ if(message.content === 'voice') {
 client.on('message', msg => {
     if(msg.author.bot) return;
     
-    if(msg.content === '+seruser') {
+    if(msg.content === '$seruser') {
       client.guilds.forEach(g => {
         
         let l = g.id
