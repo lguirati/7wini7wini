@@ -21,3 +21,14 @@ client.on('ready', () => {
      client.user.setActivity("PornHub 🙃 MILFAYA ",{type: 'WATCHING'})
 
 });
+
+
+
+
+
+
+
+
+
+
+client.login(process.env.BOT6_TOKEN);
