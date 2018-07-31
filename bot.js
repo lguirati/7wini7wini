@@ -491,19 +491,6 @@ client.on('voiceStateUpdate', (old, now) => {
 });
 
           
-client.on('guildMemberAdd', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('473656733344989186').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('473656954623885313').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
-});
-
-client.on('guildMemberRemove', member => {
-    const botCount = member.guil.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('473656733344989186').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('473656954623885313').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
-});
 
 
 
