@@ -16,7 +16,7 @@ client.on('ready', () => {
 client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 5000 ;
-    var setGame = [`أفلت من فضلك قدمي`,`Life is Hell `,` #MiLfaya غنعتازل قهرنا الفقر`];
+    var setGame = [`أفلت من فضلك قدمي`,`Life is Hell `,` غنعتازل قهرني الفقر`];
     var i = -1;
     var j = 0;
     setInterval(function (){
