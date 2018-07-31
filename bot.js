@@ -486,8 +486,8 @@ client.on('voiceStateUpdate', (old, now) => {
   const channel = client.channels.get('473239911252885535');
   const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
   const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`عدد المتصلون: ${currentSize}`);
-  if (currentSize !== size) channel.setName(`عدد المتصلون: ${currentSize}`);
+  if (!size) return channel.setName(`عدد المتصلين: ${currentSize}`);
+  if (currentSize !== size) channel.setName(`عدد المتصلين: ${currentSize}`);
 });
 
 
