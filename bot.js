@@ -35,6 +35,9 @@ client.on('ready', function(){
 });
 
 
+
+
+
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
@@ -495,6 +498,7 @@ client.on('message', msg => {
     }
     
   })
+
 
 
             
