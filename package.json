@@ -1,4 +1,5 @@
 {
+  "name": "eris",
   "name": "bytetech",
   "version": "2.1.0",
   "description": "-- AWESOMENESS --",
@@ -28,6 +29,7 @@
     "sqlite3": "^4.0.0",
     "file-system": "^2.2.2",
     "youtube-info": "^1.2.0",
+    "queue": "^4.4.2",
     "ytdl-core": "^0.20.3"
   },
   "engines": {
