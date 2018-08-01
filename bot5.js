@@ -16,7 +16,7 @@ client.on('ready', () => {
 client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 5000 ;
-    var setGame = [`أفلت من فضلك قدمي`,`Life is Hell `,` غنعتازل قهرني الفقر`];
+    var setGame = [`i AM Ugly as Fuck`,`Life is Hell `,`S A D L i F E 😥`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -32,7 +32,11 @@ client.on('ready', function(){
 
 });
 
-
+client.on('message' , mohamed => {
+if(mohamed.content.startsWith('@[PG] Spomi_YT 🌹') {
+mohamed.reply('إدا لم أرد عليك الان يمكنك ترك رسالة في الخاص ربتما أعود');
+}
+});
 
                           
 
