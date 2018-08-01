@@ -32,11 +32,6 @@ client.on('ready', function(){
 
 });
 
-client.on('message' , mohamed => {
-if(mohamed.content.startsWith('@[PG] Spomi_YT 🌹') {
-mohamed.reply('إدا لم أرد عليك الان يمكنك ترك رسالة في الخاص ربتما أعود');
-}
-});
 
                           
 
