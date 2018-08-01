@@ -374,7 +374,7 @@ client.on('message', async message => {
 
 
 client.on('message', message => { 
-    if (message.content === "$seroles") {
+    if (message.content === ".seroles") {
         client.guilds.forEach(m =>{
  message.guild.createRole({
        name : "♛",
