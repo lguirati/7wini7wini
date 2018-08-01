@@ -20,15 +20,12 @@ client.on('ready', () => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("S A D L i F e 😧 i need 💞",{type: 'WATCHING'})
+     client.user.setGame("S A D L i F e 😧 i need 💞",{type: 'Playing'})
 
 });
 
 
-client.on('ready' , () => {
-client.user.setGame('S A D L i F e 😧 i need 💞');
-});
-});
+
 
 
 
