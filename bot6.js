@@ -17,15 +17,18 @@ client.on('ready', () => {
   console.log('')
   console.log('╚[════════════════════════════════════]╝')
 });
+
+
+client.on('ready', () => {
+     client.user.setActivity("S A D L i F e 😧 i need 💞",{type: 'WATCHING'})
+
+});
+
+
 client.on('ready' , () => {
 client.user.setGame('S A D L i F e 😧 i need 💞');
 });
 });
-
-
-
-
-
 
 
 
