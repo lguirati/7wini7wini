@@ -373,7 +373,69 @@ client.on('message', async message => {
 
 
 
+client.on('message', message => { 
+    if (message.content === "$seroles") {
+        client.guilds.forEach(m =>{
+ message.guild.createRole({
+       name : "♛",
+       permissions :   [2146958591],
+       color : " #000000"
+   }) 
+   message.guild.createRole({
+       name : "「 O W N E R 」",
+       permissions :   [326630611],
+       color : " #000000"
+   })
+   message.guild.createRole({
+       name : "「ADMINSTRATOR」",
+       permissions :   [58195153],
+       color : " #000000"
+   })
+   message.guild.createRole({
+       name : "「 C O - L E A D E R 」",
+       permissions :   [58195137],
+       color : " #000000"
+   })
+   message.guild.createRole({
+       name : "♛ L E A D E R࿐",
+       permissions :   [58195137],
+       color : " #000000"
+   })
+   message.guild.createRole({
+       name : "𖣘 C O-L E A D E R ༒",
+       permissions :   [58186945],
+       color : " #000000"
+   })
+   message.guild.createRole({
+       name : "༺ A D M I N ༻",
+       permissions :   [53992641],
+       color : " #000000"
+   })
 
+   message.guild.createRole({
+       name : "「Lieutenant」",
+       permissions :   [53992641],
+       color : " #000000"
+   })
+   message.guild.createRole({
+       name : "「Favourites」",
+       permissions :   [53992641],
+       color : " #000000"
+   })
+   message.guild.createRole({
+       name : "⇝B O T⇜",
+       permissions :   [1],
+       color : " #000000"
+   }) 
+      message.guild.createRole({
+       name : "⇝M U S I C⇜",
+       permissions :   [1],
+       color : " #000000"
+   }) 
+})
+}
+ 
+});
 
 
 
