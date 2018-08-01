@@ -17,15 +17,15 @@ client.on('ready', () => {
   console.log('')
   console.log('╚[════════════════════════════════════]╝')
 });
-client.on('ready', () => {
-     client.user.setActivity("PornHub 🙃 MILFAYA ",{type: 'WATCHING'})
-
+client.on('ready' , () => {
+client.user.setGame('S A D L i F e 😧 i need 💞');
+});
 });
 
 
+g, uk]; hgs,vs
 
-
-
+qdt i`d
 
 
 
