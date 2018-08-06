@@ -30,7 +30,7 @@ client.on('guildMemberRemove', member => {
 client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 5000 ;
-    var setGame = [`$help <-- For info`,`$invite <-- For add`];
+    var setGame = [`$help <-- For info`,`MAROC ▄︻̷̿┻̿═━ GAMER`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -175,10 +175,9 @@ $invite : يرسل لك في الخاص رابط دعوته
 $id :  معلومات عن حسابك 
 $avatar : يعرض صورة حسابك 
 ________________
-  
+ MAROC ▄︻̷̿┻̿═━ GAMER البوت خاص لسيرفر 
 جاري التعديل على البوت
-لدعوة البوت من هنا 
-https://discordapp.com/oauth2/authorize?client_id=473484148917665812&permissions=8&scope=bot
+
 ================================================================== `); } });
 
 
