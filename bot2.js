@@ -448,7 +448,7 @@ client.on("guildCreate", guild => {
     client.channels.get("475827483808104448").send(embed)
   });
 
-  client.on("guildDelete", guild => {
+client.on("guildDelete", guild => {
   let embed = new Discord.RichEmbed ()
   .setTitle('Bot Logs')
   .addField(' ***Bot left from :***[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
