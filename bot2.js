@@ -439,6 +439,20 @@ client.on('message', message => {
 
 
 
+client.on('guildCreate', guild => {
+  client.channels.get("475827483808104448").send(`:white_check_mark: **تم اضافة البوت في سيرفر جديد مبروكك
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**`)
+});
+client.on('guildDelete', guild => {
+  client.channels.get("475827483808104448").send(`:negative_squared_cross_mark: **طردوني حرام والله ايش سويت انا
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__
+Server id: __${guild.id}__ 
+Server Count: __${guild.memberCount}__**`)
+});
 
 
  
