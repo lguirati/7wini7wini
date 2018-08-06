@@ -439,7 +439,7 @@ client.on('message', message => {
 
 
 
- client.on("guildCreate", guild => {
+client.on("guildCreate", guild => {
     let embed = new Discord.RichEmbed () 
     .setTitle('Bot Logs')
     .addField(' ***Bot joined to :***[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
@@ -478,9 +478,6 @@ bot.on('message', msg => {
  
 
  
-
-
-
 
 
 
