@@ -2,10 +2,16 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.'
 
+   
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+});
 
-	client.on('ready', function(){
+
+
+
+
+client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 5000 ;
     var setGame = [`.help <-- For info`,`.invite <-- For add`];
@@ -23,7 +29,6 @@ client.on('ready', () => {
     }, ms);4000
 
 });
-
 
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
