@@ -458,16 +458,6 @@ Server Count: __${guild.memberCount}__**`)
  
 
 
-client.on('voiceStateUpdate', (old, now) => {
-  const channel = client.channels.get('475846549264531482');
-  const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
-  const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`Voice online 👀: ${currentSize}`);
-  if (currentSize !== size) channel.setName(`Voice online 👀: ${currentSize}`);
-});
-
-
-
 
 
 
