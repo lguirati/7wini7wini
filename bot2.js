@@ -457,7 +457,7 @@ Server Count: __${guild.memberCount}__**`)
 
  
   client.on('message' , najzx => {
-          var prefix = "$";
+          var prefix = ".";
           if(najzx.author.bot) return;
          
           if(najzx.content.startsWith(prefix + "rolebc")) {
