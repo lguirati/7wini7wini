@@ -798,28 +798,6 @@ function play(guild, song) {
 }
 
 
-npm i ffmpeg-binaries
-npm i discord.js
-npm i fs
-npm i ms
-npm i ytdl-core
-npm i jimp
-npm i math-expression-evaluator
-npm i get-youtube-id
-npm i quick.db
-npm i figlet
-npm i zalgolize
-npm i youtube-info
-npm i simple-youtube-api
-npm i Youtube
-npm i sqlite
-npm i dateformat
-npm i pretty-ms
-npm i moment
-npm i google-translate-api
-npm i goo.gl
-npm i giphy-api
-npm i common-tags
 
 
 
