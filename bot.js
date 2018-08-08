@@ -582,9 +582,7 @@ channel.send(`** هام جدا لأصحاب بيبج موبايل
 
 
 
-const Discord = require('discord.js');
-const db = require('quick.db');
-const client = new Discord.Client();   
+
 const giphy = require('giphy-api')();    
 const googl = require('goo.gl');  
 const translate = require('google-translate-api');   
