@@ -36,6 +36,8 @@
     "node": "8.4.0"
   }
 }
+
+
 npm i ffmpeg-binaries
 npm i discord.js
 npm i fs
