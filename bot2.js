@@ -50,9 +50,9 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
    
 ╔[❖════════════❖]╗بعض أوامر
 .bc : إرسال رسالة في الخاص للجميع
-.rolemsg <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
+.rolebc <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
 متال: 
-.rolemsg @Vip كيف حالكم 
+.rolebc @Vip كيف حالكم 
 .move all : لسحب كل المتصلين إلى الروم الدي توجد فيه 
 .ms7 ? :  لمسح بالعدد أكتب
 .clear : مسح الشات يعطيك البوت رسال هل أنت متأكد فتضغط على ✔أو ❌ الموافق تتم ب ✔ للعم
@@ -456,7 +456,56 @@ Server Count: __${guild.memberCount}__**`)
 
 
  
-
+  client.on('message' , najzx => {
+          var prefix = "$";
+          if(najzx.author.bot) return;
+         
+          if(najzx.content.startsWith(prefix + "rolebc")) {
+            if (!najzx.member.hasPermission("ADMINISTRATOR"))  return;
+            let args = najzx.content.split(" ").slice(1);
+         
+            if(!args[0]) {
+              najzx.channel.send("قم بمنشنة الرتبة | +rolebc @everyone الرساله")
+                return;
+            }
+            if(!args[1]) {
+              najzx.channel.send("قم بكتابة الرسالة | +rolebc @everyone الرساله")
+                return;
+            }
+         
+              if(args[0] == "@everyone") {
+                najzx.channel.send(`لقد تم ارسال هذه الرسالة الى ${najzx.guild.memberCount} اعضاء`)
+                najzx.guild.members.forEach(m => {
+                  m.send(
+                  "**" + "السيرفر :" + "\n" +
+                  `${najzx.guild.name}` + "\n" +
+                  "المرسل :" + "\n" +
+                  `${najzx.author.tag}` + "\n" +
+                  "الرسالة :" + "\n" +
+                  `${args[1]}` + "**"
+                  )
+                })
+                return;
+              }
+         
+                  var role = najzx.mentions.roles.first();
+                    if(!role) {
+                      najzx.reply("لا توجد رتبة بهذا الاسم")
+                        return;
+                    }
+                najzx.guild.members.filter(m => m.roles.get(role.id)).forEach(n => {
+                  n.send(
+                  "**" + "السيرفر :" + "\n" +
+                  `${najzx.guild.name}` + "\n" +
+                  "المرسل :" + "\n" +
+                  `${najzx.author.tag}` + "\n" +
+                  "الرسالة :" + "\n" +
+                  `${args[1]}` + "**"
+                  )
+                })
+                najzx.channel.send(`لقد تم ارسال هذه الرسالة الى ${najzx.guild.members.filter(m => m.roles.get(role.id)).size} عضو`)
+            }
+        });
 
 
 
