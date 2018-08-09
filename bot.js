@@ -140,11 +140,7 @@ client.on('message' , message => {
 });
 
 
-client.on('message', message => {
-if(message.content.startsWith(prefix + "invite")) { 
-message.author.send(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2080374975`);
-}
-});
+
 
 client.on('message', message => {
     let args = message.content.split(" ").slice(1);
