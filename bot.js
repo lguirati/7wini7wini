@@ -564,7 +564,7 @@ client.on('message', message => {
        });
 
 
-
+// \\ 
 client.on("ready", () => {
 let channel =     client.channels.get("476400347699740683")
 setInterval(function() {
@@ -573,7 +573,7 @@ channel.send(`** هام جدا لأصحاب بيبج موبايل
 مسابق سوف تنطلق اسبوع قادم إنشاء الله.**`);
 }, 3200000)
 })
-
+// \\
 
 
 
