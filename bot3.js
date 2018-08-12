@@ -1,78 +1,112 @@
- const Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '%'
-
+const prefix = 'S'
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`%help`,"http://twitch.tv/S-F")
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('')
 });
 
-                      
+
+
+client.on('ready', function(){
+    client.user.setStatus("dnd");
+    var ms = 7000 ;
+    var setGame = [`Spomi Army`,`Just Smile ☺`,`Shelp`];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+       if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/KiNg66S`);
+    }, ms);7000
+
+});
+
+
+
+
+
+
+const config = require('./configs.json');
+
+
+const size    = config.colors;
+const rainbow = new Array(size);
+
+for (var i=0; i<size; i++) {
+  var red   = sin_to_hex(i, 0 * Math.PI * 2/3); // 0   deg
+  var blue  = sin_to_hex(i, 1 * Math.PI * 2/3); // 120 deg
+  var green = sin_to_hex(i, 2 * Math.PI * 2/3); // 240 deg
+
+  rainbow[i] = '#'+ red + green + blue;
+}
+
+function sin_to_hex(i, phase) {
+  var sin = Math.sin(Math.PI / size * 2 * i + phase);
+  var int = Math.floor(sin * 127) + 128;
+  var hex = int.toString(16);
+
+  return hex.length === 1 ? '0'+hex : hex;
+}
+
+let place = 0;
+const servers = config.servers;
+
+function changeColor() {
+  for (let index = 0; index < servers.length; ++index) {        
+    client.guilds.get(servers[index]).roles.find('name', config.roleName).setColor(rainbow[place])
+        .catch(console.error);
         
- 
+    
+    
+    if(place == (size - 1)){
+      place = 0;
+    }else{
+      place++;
+    }
+  }
+}
+
+
+
+client.on('ready', () => {
+  console.log('Bot Is Online')
+  if(config.speed <10000){console.log("The minimum speed is 60.000, if this gets abused your bot might get IP-banned"); process.exit(1);}
+  setInterval(changeColor, config.speed);
+});
+
+
+
+
+
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+('+avatar ' , 'صورة حسابك / Your image account  ') 
+('+linke ' , 'Bot send you Link server for join ') 
+('+id ' , 'لعرض معلوماتك / information for your account ') 
+('رابط السيرفر في الخاص  ' ,'  رابط  ')
+
+   message.author.sendEmbed(embed)
+   
+   }
+   }); 
 client.on('message', message => {
-    if (message.content.startsWith("%avatar")) {
-        var mentionned = message.mentions.users.first();
-    var x5bzm;
-      if(mentionned){
-          var x5bzm = mentionned;
-      } else {
-          var x5bzm = message.author;
-          
-      }
-        const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setImage(`${x5bzm.avatarURL}`)
-      message.channel.sendEmbed(embed);
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done Chek private " , " تــــم ارســالك في الخــاص")
+  message.channel.sendEmbed(embed);
     }
 });
-
-  
-
-client.on('message',async Epic => {
-  var codes = "%";
-  if(Epic.content.startsWith(codes + "v voice")) {
-  if(!Epic.guild.member(Epic.author).hasPermissions('MANAGE_CHANNELS')) return Epic.reply(':x: **ليس لديك الصلاحيات الكافية**');
-  if(!Epic.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return Epic.reply(':x: **ليس معي الصلاحيات الكافية**');
-  Epic.guild.createChannel(`Voice Online : [ ${Epic.guild.members.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
-    console.log(`Voice Online Is Activation In ${Epic.guild.name}`);
-    c.overwritePermissions(Epic.guild.id, {
-      CONNECT: false,
-      SPEAK: false
-    });
-    setInterval(() => {
-      c.setName(` Online :  ${Epic.guild.members.filter(m => m.voiceChannel).size} .`)
-    },1000);
-  });
-  }
-});
-
-
-
-
-
-
 
 
 
