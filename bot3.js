@@ -81,6 +81,30 @@ client.on('ready', () => {
 
 
 
+client.on("message", message => {
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+('+avatar ' , 'صورة حسابك / Your image account  ') 
+('+linke ' , 'Bot send you Link server for join ') 
+('+id ' , 'لعرض معلوماتك / information for your account ') 
+('رابط السيرفر في الخاص  ' ,'  رابط  ')
+
+   message.author.sendEmbed(embed)
+   
+   }
+   }); 
+client.on('message', message => {
+     if (message.content === (prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#8650a7")
+  .addField("Done Chek private " , " تــــم ارســالك في الخــاص")
+  message.channel.sendEmbed(embed);
+    }
+});
 
 
 
