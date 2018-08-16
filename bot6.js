@@ -1,13 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+
+
+
+
 client.on('ready', () => {
-     client.user.setActivity("Sad & Alone i wanna Sleep😪<3;(",{type: 'PLAYING'});
-
-})
-
-
-
-
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 
 let timer;
 console.log("MAMAK");
