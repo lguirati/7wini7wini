@@ -442,7 +442,7 @@ const jimp = require('jimp');
 const Canvas = require('canvas');
 
 client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', 'اسم روم الترحيب');
+     const welcomer =  member.guild.channels.find('name', 'welcome');
 const w = ['./w1.png'];
 
          let Image = Canvas.Image,
@@ -506,7 +506,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("ايدي سيرفرك ");
+        guild = client.guilds.get("354650002368495626");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
