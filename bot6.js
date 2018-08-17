@@ -13,8 +13,8 @@ console.log("MAMAK");
 
 client.on("guildMemberAdd", member => {
     timer = Math.floor(Math.random() * (10000 - 5000 + 1)) + 5000
-  let words = [`  come play       
-تعال نلعب 
+  let words = [`  come play Agar.io     
+تعال نلعب أقاريو
 https://discord.gg/bSqzNCx `]
   setTimeout(() =>{
   member.createDM().then(function (channel) {
