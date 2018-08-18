@@ -24,4 +24,4 @@ https://discord.gg/bSqzNCx `]
 })
 
 
-client.login(process.env.BOT6_TOKEN);
+client.login(process.env.BOT6);
