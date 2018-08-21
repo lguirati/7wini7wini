@@ -670,7 +670,8 @@ client.on('voiceStateUpdate', (old, now) => {
 });
 
 
-
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
 const Discord = require("discord.js")
 const client = new Discord.Client()
@@ -691,6 +692,10 @@ channel.send(`**هام جدا لأصحاب بيبج موبايل
 عواشرالمبروك لجميع أصدقاء و تعيد وتعاود إنشاء الله.**`);
 }, 7200000)
 }
+
+	  
+const Discord = require('discord.js');
+const client = new Discord.Client(); 
 
 client.on("ready", () => {
 let channel =     client.channels.get("476400347699740683")
