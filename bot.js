@@ -714,4 +714,13 @@ channel.send(`**هام جدا لأصحاب critical ops
 }, 7200000)
 })
 
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
