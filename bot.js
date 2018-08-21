@@ -672,7 +672,7 @@ client.on('voiceStateUpdate', (old, now) => {
 
 
 client.on("ready", () => {
-let channel =     client.channels.get("476400347699740683")
+let channel =     client.channels.get("479624902677102602")
 setInterval(function() {
 channel.send(** هام جدا لأصحاب بيبج موبايل
 سينظم سيرفرMAROC ▄︻̷̿┻̿═━ GAMER بطولة في لعبةبيبج موبايل التي سوف تقام إنشاء الله بعد العيد الأضحى المبارك 
