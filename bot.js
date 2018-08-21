@@ -694,8 +694,6 @@ channel.send(`**هام جدا لأصحاب بيبج موبايل
 }
 
 	  
-const Discord = require('discord.js');
-const client = new Discord.Client(); 
 
 client.on("ready", () => {
 let channel =     client.channels.get("476400347699740683")
