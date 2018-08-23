@@ -671,6 +671,7 @@ client.on('voiceStateUpdate', (old, now) => {
 
 
 client.on('message', message => {
+var prefix = "$";
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -679,11 +680,12 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "$say") {
+  if (command == "say") {
    message.channel.sendMessage(args.join("  "))
    message.delete()
   }
  });
+ 
  
 
 
