@@ -25,7 +25,7 @@ client.on('ready', function(){
         }
         i = i+j;
         client.user.setGame(setGame[i],`http://www.twitch.tv/osama_gmt`);
-    }, ms);10000
+    }, ms);5000
 
 });
 
@@ -534,6 +534,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
+var prefix = ".";
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -542,11 +543,12 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "~say") {
+  if (command == "say") {
    message.channel.sendMessage(args.join("  "))
    message.delete()
   }
  });
+ 
  
 
 
