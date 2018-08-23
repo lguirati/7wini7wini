@@ -48,6 +48,7 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
 ╔[❖════════════❖]╗ Prefix =  .
    
 ╔[❖════════════❖]╗بعض أوامر
+.say : يكرر كلامك 
 .bc : إرسال رسالة في الخاص للجميع
 .rolebc <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
 متال: 
