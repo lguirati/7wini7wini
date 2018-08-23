@@ -12,7 +12,7 @@ client.on('ready', () => {
 
 
 client.on('ready', function(){
-    var ms = 100000 ;
+    var ms = 5000 ;
     var setGame = [`${prefix}help Servers ${client.guilds.size} `,`${prefix}invite Users ${client.users.size}`];
     var i = -1;
     var j = 0;
