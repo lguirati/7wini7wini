@@ -249,45 +249,74 @@ client.on('message', message => {
        });
 
 
-client.on('message', async message => {
-            if(message.content.includes('discord.gg')){ 
-                if(message.member.hasPermission("MANAGE_GUILD")) return;
-        if(!message.channel.guild) return;
-        message.delete()
-          var command = message.content.split(" ")[0];
-    let muterole = message.guild.roles.find(`name`, "Muted");
-    if(!muterole){
-      try{
-        muterole = await message.guild.createRole({
-          name: "Muted",
-          color: "#000000",
-          permissions:[]
-        })
-        message.guild.channels.forEach(async (channel, id) => {
-          await channel.overwritePermissions(muterole, {
-            SEND_MESSAGES: false,
-            ADD_REACTIONS: false
-          });
+client.on('message', message => {
+var prefix = ".";
+
+    if (message.author.id === client.user.id) return;
+    if (message.guild) {
+   let embed = new Discord.RichEmbed()
+    let args = message.content.split(' ').slice(1).join(' ');
+if(message.content.split(' ')[0] == prefix + 'bc') {
+    if (!args[1]) {
+message.channel.send("**0bc <message>**");
+return;
+}
+        message.guild.members.forEach(m => {
+   if(!message.member.hasPermission('ADMINISTRATOR')) return;
+            var bc = new Discord.RichEmbed()
+            .addField('» السيرفر :', `${message.guild.name}`)
+            .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
+            .addField(' » الرسالة : ', args)
+            .setColor('RANDOM')
+            // m.send(`[${m}]`);
+            m.send(`${m}`,{embed: bc});
         });
-      }catch(e){
-        console.log(e.stack);
-      }
     }
-           if(!message.channel.guild) return message.reply('** This command only for servers**');
-     message.member.addRole(muterole);
-    const embed500 = new Discord.RichEmbed()
-      .setTitle("Muted Ads")
-            .addField(`**  You Have Been Muted **` , `**Reason : Sharing Another Discord Link**`)
-            .setColor("c91616")
-            .setThumbnail(`${message.author.avatarURL}`)
-            .setAuthor(message.author.username, message.author.avatarURL)
-        .setFooter(`${message.guild.name} `)
-     message.channel.send(embed500)
-     message.author.send('` انت معاقب ميوت شاتي بسبب نشر سرفرات ان كان عن طريق الخطا **ف** تكلم مع الادارة `');
-   
-       
+    } else {
+        return;
     }
-})
+});
+ 
+
+
+
+
+
+
+client.on('message', message => {
+var prefix = ".";
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+  if (command == "say") {
+   message.channel.sendMessage(args.join("  "))
+   message.delete()
+  }
+ });
+ 
+ 
+
+client.on('message', message => {
+    var args = message.content.split(/[ ]+/)
+    if(message.content.includes('discord.gg')){
+        message.delete()
+      message.channel.sendMessage("", {embed: {
+        title: "No invite 😡 لا تنشر",
+        color: 0x06DF00,
+        description: "Don't Shear here 💔 يمنع النشر في هذا السيرفر",
+        footer: {
+          text: "By Abo Khalil"
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+}); 
 
 
 client.on('voiceStateUpdate', (old, now) => {
