@@ -26,7 +26,7 @@ client.on('ready', () => {
     client.user.setStatus("dnd")
 });
 //by ! - .'
-const prefix = "5"
+const prefix = "!"
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ! - .'
@@ -221,7 +221,7 @@ function play(guild, song) {
 
 
 client.on("message", message => {
- if (message.content === `${prefix}`) {
+ if (message.content === `${prefix}+help`) {
   const embed = new Discord.RichEmbed() //by ! - .'
       .setColor("#000000")//by ! - .'
       .setDescription(`
@@ -243,7 +243,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 
 client.on('ready', () => {
-     client.user.setActivity("SPACE AGAR.IO",{type: 'WATCHING'})
+     client.user.setActivity("!help or !invite",{type: 'WATCHING'})
 });
 
 
@@ -252,4 +252,4 @@ client.on('ready', () => {
 
 
 
-client.login(process.env.BOT8_TOKEN);
+client.login(process.env.BOT9_TOKEN);
