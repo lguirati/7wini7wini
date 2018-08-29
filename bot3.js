@@ -405,7 +405,7 @@ const moment = require('moment');
 const jimp = require('jimp');
 const Canvas = require('canvas');
 client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', 'welcome');
+     const welcomer =  member.guild.channels.find('name', 'g͢eneral');
 const w = ['./w1.png'];
  
          let Image = Canvas.Image,
