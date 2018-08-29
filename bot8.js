@@ -220,25 +220,23 @@ function play(guild, song) {
 
 
 
-client.on("message", message => {
- if (message.content === `${prefix}+help`) {
-  const embed = new Discord.RichEmbed() //by ! - .'
-      .setColor("#000000")//by ! - .'
-      .setDescription(`
-${prefix}play ⇏ لتشغيل أغنية برآبط أو بأسم
-${prefix}skip ⇏ لتجآوز الأغنية الحآلية
-${prefix}pause ⇏ إيقآف الأغنية مؤقتا
-${prefix}resume ⇏ لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-${prefix}vol ⇏ لتغيير درجة الصوت 100 - 0
-${prefix}stop ⇏ لإخرآج البوت من الروم
-${prefix}np ⇏ لمعرفة الأغنية المشغلة حآليا
-${prefix}queue ⇏ لمعرفة قآئمة التشغيل
- `)//by ! - .'
-   message.channel.sendEmbed(embed)//by ! - .'
-    
-   }
-   }); 
-   
+var prefix = '#';
+
+client.on('message', msg => {
+	if (msg.content.startsWith(prefix + 'help')) {
+msg.author.send("Commands الطلب " + `  **
+   "  : الاوامر "
+For add Bot | لدعوت البوت 
+https://discordapp.com/oauth2/authorize?client_id=468601539968237598&permissions=8&scope=bot
+:headphones:  ${prefix}play |اسم لاغنيه / رابط الاغنية
+:headphones:  ${prefix}skipللإنتقاال الى الاغنيه التاليه (\اذا كان هناك بقائمة الانتظار\
+:headphones:  ${prefix}stop|لأيقاف الموسيقى
+:headphones:  ${prefix}volume |لتغير حجم الصوت
+:headphones:  ${prefix}np | لإقاف الموسيقى مؤقتا
+:headphones:  ${prefix}resume |لاعادت تشغيل الاغنية الموجودة
+**`);
+ }
+});
 
 
 
