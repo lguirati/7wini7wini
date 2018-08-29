@@ -221,7 +221,7 @@ function play(guild, song) {
 
 
 client.on("message", message => {
- if (message.content === `${prefix}`) {
+ if (message.content === `${prefix}+help`) {
   const embed = new Discord.RichEmbed() //by ! - .'
       .setColor("#000000")//by ! - .'
       .setDescription(`
@@ -243,7 +243,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 
 client.on('ready', () => {
-     client.user.setActivity("SPACE AGAR.IO",{type: 'WATCHING'})
+     client.user.setActivity("#help or #invite ",{type: 'WATCHING'})
 });
 
 
