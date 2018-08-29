@@ -26,7 +26,7 @@ client.on('ready', () => {
     client.user.setStatus("dnd")
 });
 //by ! - .'
-const prefix = "5"
+const prefix = "#"
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
 	//by ! - .'
@@ -240,12 +240,51 @@ https://discordapp.com/oauth2/authorize?client_id=468601539968237598&permissions
 
 
 
-client.on('ready', () => {
-     client.user.setActivity("#help or #invite ",{type: 'WATCHING'})
-});
+
 
 
                           
+
+
+client.on('message', message => {
+       if (message.content.startsWith(prefix + 'botinfo')) {
+     let msg =  client.guilds.map(guild => `**${guild.name}** عدد الاعضاء: ${guild.memberCount}`).join('\n');
+  let embed = new Discord.RichEmbed()
+  .setTitle(`${client.guilds.size}سيرفرات `)
+  .setDescription(`${msg}`)
+  .setColor("#ebf442");
+  message.channel.send(embed);
+}
+});
+
+
+
+client.on('ready', function(){
+    var ms = 5000 ;
+    var setGame = [`${prefix}help Servers ${client.guilds.size} `,`${prefix}invite Users ${client.users.size}`];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/osama_gmt`);
+    }, ms);5000
+
+});
+
+
+client.on('message', message => {
+if(message.content.startsWith(prefix + "invite")) { 
+message.author.send(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2080374975`);
+}
+});
+
+
 
 
 
