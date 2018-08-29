@@ -240,7 +240,7 @@ function play(guild, song) {
 
 
 
-var prefix = '#';
+
 
 client.on('message', msg => {
 	if (msg.content.startsWith(prefix + 'help')) {
