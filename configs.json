@@ -8,6 +8,6 @@
     ],
       "roleName": "RNBW", 
     "colors": 12,
-    "speed": 10000,
+    "speed": 1000000,
     "logging": true
 }
