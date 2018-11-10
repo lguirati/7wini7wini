@@ -69,7 +69,7 @@ _____________________________________________
 جاري التعديل على البوت
 لدعوة البوت من هنا 
 
-https://discordapp.com/oauth2/authorize?client_id=466684487674363904&scope=bot&permissions=2080374975
+https://discordapp.com/oauth2/authorize?client_id=510281472028966942&scope=bot&permissions=2080374975
 
 ================================================================== `); } });
 
