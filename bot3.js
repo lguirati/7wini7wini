@@ -10,7 +10,7 @@ client.on('ready', () => {
 client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 7000 ;
-    var setGame = [`Spomi Army`,`Just Smile ☺`,`i Love you all`];
+    var setGame = [`PUBG MAROC`,`Just Smile ☺`,`i Love you all`];
     var i = -1;
     var j = 0;
     setInterval(function (){
