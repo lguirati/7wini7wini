@@ -516,6 +516,23 @@ message.channel.send(alpha);
   });
 
 
+client.on('ready', function(){
+    var ms = 5000 ;
+    var setGame = [`${prefix}help Servers ${client.guilds.size} `,`${prefix}invite Users ${client.users.size}`];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i],`http://www.twitch.tv/osama_gmt`);
+    }, ms);5000
+
+});
 
 
 
