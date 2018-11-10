@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '.'
+const prefix = '%'
 
    
 client.on('ready', () => {
@@ -45,23 +45,23 @@ client.on('guildMemberRemove', member => {
 
 
 client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~The ARAB GAMER ~~__ By: Spomi : 9954 
-╔[❖════════════❖]╗ Prefix =  .
+╔[❖════════════❖]╗ Prefix =  %
    
 ╔[❖════════════❖]╗بعض أوامر
-.say : يكرر كلامك 
-.bc : إرسال رسالة في الخاص للجميع
-.rolebc <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
+%say : يكرر كلامك 
+%bc : إرسال رسالة في الخاص للجميع
+%rolebc <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
 متال: 
-.rolebc @Vip كيف حالكم 
-.move all : لسحب كل المتصلين إلى الروم الدي توجد فيه 
-.ms7 ? :  لمسح بالعدد أكتب
-.clear : مسح الشات يعطيك البوت رسال هل أنت متأكد فتضغط على ✔أو ❌ الموافق تتم ب ✔ للعم
-.invite : يرسل لك في الخاص رابط دعوته
-.avatar : يعرض صورة حسابك   
-.create SQUAD (رقم السكواد):.create SQUAD 1 متال
+%rolebc @Vip كيف حالكم 
+%moveall : لسحب كل المتصلين إلى الروم الدي توجد فيه 
+%ms7  :  لمسح بالعدد أكتب
+%clear : مسح الشات يعطيك البوت رسال هل أنت متأكد فتضغط على ✔أو ❌ الموافق تتم ب ✔ للعم
+%invite : يرسل لك في الخاص رابط دعوته
+%avatar : يعرض صورة حسابك   
+%create SQUAD (رقم السكواد):.create SQUAD 1 متال
 يأتيك إسم الفويس بهاد الشكل 
 SQUAD 1
-.id : معلومات عن حسابك 
+%id : معلومات عن حسابك 
 _____________بعض خصائص البوت__________________
 إدا أحد أرسل دعوة في الشات يعطيه البوت ميوت تلقئ ورول بإسم ميوتد
   
@@ -97,7 +97,7 @@ if (message.content.startsWith(prefix+"create SQUAD")) {
 
 
 client.on('message', message => {
-    if (message.content.startsWith(".avatar")) {
+    if (message.content.startsWith("%avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -252,7 +252,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-var prefix = ".";
+var prefix = "%";
 
     if (message.author.id === client.user.id) return;
     if (message.guild) {
@@ -314,7 +314,7 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 
 
 client.on('message', message => {
-    if(message.content.startsWith(prefix + 'move all')) {
+    if(message.content.startsWith(prefix + 'moveall')) {
      if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('**لايوجد لديك صلاحية سحب الأعضاء**');
        if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return message.reply("**لايوجد لدي صلاحية السحب**");
     if (message.member.voiceChannel == null) return message.channel.send(`**الرجاء الدخول لروم صوتي**`)
@@ -374,7 +374,7 @@ client.on('message', async message => {
 
 
 client.on('message', message => { 
-    if (message.content === ".seroles") {
+    if (message.content === "%seroles") {
         client.guilds.forEach(m =>{
  message.guild.createRole({
        name : "♛",
@@ -535,7 +535,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-var prefix = ".";
+var prefix = "%";
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
