@@ -253,7 +253,7 @@ message.channel.send({embed});
 
 
 client.on('message', message => {
-    if(message.content.startsWith(prefix + 'move all')) {
+    if(message.content.startsWith(prefix + 'moveall')) {
      if (!message.member.hasPermission("MOVE_MEMBERS")) return message.channel.send('**لايوجد لديك صلاحية سحب الأعضاء**');
        if(!message.guild.member(client.user).hasPermission("MOVE_MEMBERS")) return message.reply("**لايوجد لدي صلاحية السحب**");
     if (message.member.voiceChannel == null) return message.channel.send(`**الرجاء الدخول لروم صوتي**`)
@@ -336,13 +336,6 @@ client.on('message', message => {
 }); 
 
 
-client.on('voiceStateUpdate', (old, now) => {
-  const channel = client.channels.get('479623693421510666');
-  const currentSize = channel.guild.members.filter(m => m.voiceChannel).size;
-  const size = channel.name.match(/\[\s(\d+)\s\]/);
-  if (!size) return channel.setName(`Voice Online: ${currentSize}`);
-  if (currentSize !== size) channel.setName(`Voice Online: ${currentSize}`);
-});
 
 
 
