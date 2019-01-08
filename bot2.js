@@ -32,7 +32,7 @@ client.on('ready', function(){
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('532324212619083785').setName(`⟫『 ${memberCount} USERS 』⟪`);
+    client.channels.get('532324442525794324').setName(`⟫『 ${memberCount} USERS 』⟪`);
     client.channels.get('532324212619083785').setName(`⟫『 ${botCount} THE BOT 』⟪`);
 });
 
@@ -40,7 +40,7 @@ client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
     client.channels.get('532324442525794324').setName(`⟫『 ${memberCount} USERS 』⟪`);
-    client.channels.get('532324442525794324').setName(`⟫『 ${botCount} THE BOT 』⟪`);
+    client.channels.get('532324212619083785').setName(`⟫『 ${botCount} THE BOT 』⟪`);
 });
 
 
