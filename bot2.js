@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '%'
+const prefix = '+'
 
    
 client.on('ready', () => {
@@ -45,31 +45,38 @@ client.on('guildMemberRemove', member => {
 
 
 client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~The ARAB GAMER ~~__ By: Spomi : 9954 
-╔[❖════════════❖]╗ Prefix =  %
+╔[❖════════════❖]╗ Prefix =  +
    
 ╔[❖════════════❖]╗بعض أوامر
-%say : يكرر كلامك 
-%bc : إرسال رسالة في الخاص للجميع
-%rolebc <@role> يرسل رسالة في الخاص للرول الدي قمت بمنشنته
-متال: 
-%rolebc @Vip كيف حالكم 
-%moveall : لسحب كل المتصلين إلى الروم الدي توجد فيه 
-%ms7  :  لمسح بالعدد أكتب
-%clear : مسح الشات يعطيك البوت رسال هل أنت متأكد فتضغط على ✔أو ❌ الموافق تتم ب ✔ للعم
-%invite : يرسل لك في الخاص رابط دعوته
-%avatar : يعرض صورة حسابك   
-%create SQUAD (رقم السكواد):.create SQUAD 1 متال
-يأتيك إسم الفويس بهاد الشكل 
-SQUAD 1
-%id : معلومات عن حسابك 
-_____________بعض خصائص البوت__________________
+
++id : معلومات عن حسابك 
+
++say : يكرر كلامك 
+
++bc : إرسال رسالة في الخاص للجميع
+
++moveall : لسحب كل المتصلين إلى الروم الدي توجد فيه 
+
++ms7  :  لمسح بالعدد أكتب
+
++clear : مسح الشات يعطيك البوت رسال هل أنت متأكد فتضغط على ✔أو ❌ الموافق تتم ب ✔ للعم
+
++invite : يرسل لك في الخاص رابط دعوته
+
++avatar : يعرض صورة حسابك   
+
++create (إسم الروم) :   
+إنشاء روم صوتي 
+
+____________________________________________
+تنبيه :👇ا
 إدا أحد أرسل دعوة في الشات يعطيه البوت ميوت تلقئ ورول بإسم ميوتد
   
-_____________________________________________
+____________________________________________
 جاري التعديل على البوت
 لدعوة البوت من هنا 
 
-https://discordapp.com/oauth2/authorize?client_id=510281472028966942&scope=bot&permissions=2080374975
+https://discordapp.com/oauth2/authorize?client_id=471736041091629056&scope=bot&permissions=2080374975
 
 ================================================================== `); } });
 
@@ -85,7 +92,7 @@ message.author.send(`https://discordapp.com/oauth2/authorize?client_id=${client.
 
 
 client.on('message', message => {
-if (message.content.startsWith(prefix+"create SQUAD")) {
+if (message.content.startsWith(prefix+"create")) {
     var args = message.content.split(" ").slice(1);
     var argrst = args.join(' ');
                 message.guild.createChannel(`${argrst}`,'voice')
@@ -97,7 +104,7 @@ if (message.content.startsWith(prefix+"create SQUAD")) {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("%avatar")) {
+    if (message.content.startsWith("+avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -156,7 +163,7 @@ msg.delete();
 });
 
 client.on('message', message => {
-	const prefix = '.'
+	const prefix = '+'
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
@@ -252,7 +259,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-var prefix = "%";
+var prefix = "+";
 
     if (message.author.id === client.user.id) return;
     if (message.guild) {
@@ -457,7 +464,7 @@ Server Count: __${guild.memberCount}__**`)
 
  
   client.on('message' , najzx => {
-          var prefix = ".";
+          var prefix = "+";
           if(najzx.author.bot) return;
          
           if(najzx.content.startsWith(prefix + "rolebc")) {
@@ -535,7 +542,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-var prefix = "%";
+var prefix = "+";
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
