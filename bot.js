@@ -17,7 +17,7 @@ client.on('ready', () => {
 client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 5000 ;
-    var setGame = [`$help <-- For info`,`MAROC ▄︻̷̿┻̿═━ GAMER`];
+    var setGame = [`$help <-- For info`,`LORD ▄︻̷̿┻̿═━ GAMER`];
     var i = -1;
     var j = 0;
     setInterval(function (){
