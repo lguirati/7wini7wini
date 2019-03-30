@@ -32,15 +32,15 @@ client.on('ready', function(){
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('532324442525794324').setName(` ${memberCount} ᴜꜱᴇʀꜱ 🕵 `);
-    client.channels.get('532324212619083785').setName(` ${botCount} BOTS 🤖 `);
+    client.channels.get('469336122510802944').setName(` ${memberCount} ᴜꜱᴇʀꜱ 🕵 `);
+    client.channels.get('469336123462909962').setName(` ${botCount} BOTS 🤖 `);
 });
 
 client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('532324442525794324').setName(` ${memberCount} ᴜꜱᴇʀꜱ 🕵 `);
-    client.channels.get('532324212619083785').setName(` ${botCount} BOTS 🤖 `);
+    client.channels.get('469336122510802944').setName(` ${memberCount} ᴜꜱᴇʀꜱ 🕵 `);
+    client.channels.get('469336123462909962').setName(` ${botCount} BOTS 🤖 `);
 });
 
 
