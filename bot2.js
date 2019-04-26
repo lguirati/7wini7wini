@@ -29,19 +29,6 @@ client.on('ready', function(){
 
 });
 
-client.on('guildMemberAdd', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('532324442525794324').setName(` ${memberCount} ᴜꜱᴇʀꜱ 🕵 `);
-    client.channels.get('532324212619083785').setName(` ${botCount} BOTS 🤖 `);
-});
-
-client.on('guildMemberRemove', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('532324442525794324').setName(` ${memberCount} ᴜꜱᴇʀꜱ 🕵 `);
-    client.channels.get('532324212619083785').setName(` ${botCount} BOTS 🤖 `);
-});
 
 
 client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~Go-Pro ~~__  
