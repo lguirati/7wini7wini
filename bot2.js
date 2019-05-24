@@ -29,19 +29,6 @@ client.on('ready', function(){
 
 });
 
-client.on('guildMemberAdd', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('532324442525794324').setName(` ${memberCount} ᴜꜱᴇʀꜱ 🕵 `);
-    client.channels.get('532324212619083785').setName(` ${botCount} BOTS 🤖 `);
-});
-
-client.on('guildMemberRemove', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('532324442525794324').setName(` ${memberCount} ᴜꜱᴇʀꜱ 🕵 `);
-    client.channels.get('532324212619083785').setName(` ${botCount} BOTS 🤖 `);
-});
 
 
 client.on('message', message => { if (message.author.bot) return; if (message.content === prefix + "help") { 		 message.channel.send('**The Message Was Sent On Private**'); 	 		 message.author.sendMessage(` ** __~~Go-Pro ~~__  
@@ -61,16 +48,13 @@ client.on('message', message => { if (message.author.bot) return; if (message.co
 
 +v2min : إنشاء روم صوتي لمدة دقيقتين
 
-+ms7  :  لمسح بالعدد أكتب
-
-+clear : مسح الشات يعطيك البوت رسال هل أنت متأكد فتضغط على ✔أو ❌ الموافق تتم ب ✔ للعم
++clear : مسح الشات يعطيك البوت رسال هل أنت متأكد 
 
 +invite : يرسل لك في الخاص رابط دعوته
 
 +avatar : يعرض صورة حسابك   
 
-+create (إسم الروم) :   
-إنشاء روم صوتي 
++create : إنشاء روم صوتي
 
 _____________________^بعض الاوامر 
 قوانين
