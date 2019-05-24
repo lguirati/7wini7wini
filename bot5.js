@@ -16,7 +16,7 @@ client.on('ready', () => {
 client.on('ready', function(){
     client.user.setStatus("dnd");
     var ms = 5000 ;
-    var setGame = [`i'm Ugly as Fuck`,`Life is Hell `,`S A D L i F E 😥`];
+    var setGame = [`Ooh shit here we go again`,`Life is Hell `,`S A D L i F E 😥`];
     var i = -1;
     var j = 0;
     setInterval(function (){
